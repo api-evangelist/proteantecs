@@ -1,0 +1,19 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.proteantecs.com/
+plan_count: 0
+plans: []
+note: >-
+  proteanTecs publishes no pricing, plans or tiers of any kind. The site has no /pricing
+  page and none appears in https://www.proteantecs.com/sitemap.xml (190 URLs, all
+  solutions, industries, blog, press, events, resources and legal). Commercial engagement
+  runs entirely through https://www.proteantecs.com/contact — an enterprise "contact us"
+  motion for semiconductor design and manufacturing customers, where the monitoring IP is
+  licensed into a customer's silicon under agreement. An honest zero, not an unchecked field.
+searched:
+- url: https://www.proteantecs.com/sitemap.xml
+  status: 200
+  finding: no pricing or plans URL present
+- url: https://www.proteantecs.com/contact
+  status: 200
+  finding: enterprise contact form is the only commercial entry point

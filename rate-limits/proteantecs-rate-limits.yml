@@ -1,0 +1,21 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.proteantecs.com/
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No published rate limits. proteanTecs ships no public API reference, so there is no
+  documented quota, window, burst, exhaustion status code, or RateLimit-*/X-RateLimit-*/
+  Retry-After response header to record. The company markets "APIs and data connectors for
+  seamless integration with ATEs and analytics tools" on its chip-production solution page,
+  but that surface is delivered to contracted customers and its only reachable host,
+  support.proteantecs.com, answers 401 to anonymous callers. Recorded as an explicit zero.
+searched:
+- url: https://www.proteantecs.com/chip-production
+  status: 200
+  finding: 'marketing claim only: "The solution provides APIs and data connectors for
+    seamless integration with ATEs and analytics tools." No limits stated.'
+- url: https://support.proteantecs.com/
+  status: 401
+  finding: customer application, anonymous callers rejected before any rate-limit header

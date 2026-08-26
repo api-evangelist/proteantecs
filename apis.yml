@@ -1,17 +1,33 @@
 aid: proteantecs
-name: Proteantecs
-description: 'Proteantecs is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: proteanTecs
+description: 'proteanTecs is an Israeli deep data analytics company for advanced electronics.
+  It embeds on-chip monitoring Agents (UCT, margin, path margin, I/O and power monitors)
+  into semiconductor designs and pairs them with cloud and edge machine-learning applications
+  that report health, performance, reliability and quality of chips and systems from design
+  through production test into field operation. Solutions cover power and performance
+  optimization, RAS, functional safety and diagnostics, chip production, system production
+  and advanced packaging, and are consumed by semiconductor, data center, AI/HPC, automotive,
+  telecom and mobile customers. The company markets APIs and data connectors for integrating
+  its analytics with ATE testers and third-party analytics tools, but publishes no public
+  developer program, API reference or machine-readable contract.'
+image: https://www.proteantecs.com/hubfs/Website/Global/Logos/proteantecs-logo-light.svg
 url: https://raw.githubusercontent.com/api-evangelist/proteantecs/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Semiconductors
+- Chip Monitoring
+- Deep Data Analytics
+- Electronics
+- Machine Learning
+- Reliability
+- Silicon Lifecycle Management
+- Test and Measurement
+- Advanced Packaging
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +35,68 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/proteantecs-domain-security.yml
 - type: Website
-  url: https://www.hiive.com/securities/proteantecs-stock
+  url: https://www.proteantecs.com/
+- type: About
+  url: https://www.proteantecs.com/about
+- type: Blog
+  url: https://www.proteantecs.com/blog
+- type: BlogRSS
+  url: https://www.proteantecs.com/blog/rss.xml
+- type: Support
+  url: https://www.proteantecs.com/contact
+- type: Contact
+  url: https://www.proteantecs.com/contact
+- type: TermsOfService
+  url: https://guc.proteantecs.com/tos
+- type: PrivacyPolicy
+  url: https://www.proteantecs.com/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/proteantecs
+- type: LinkedIn
+  url: https://www.linkedin.com/company/proteantecs
+- type: Twitter
+  url: https://x.com/ProteanTecs
+- type: Careers
+  url: https://www.proteantecs.com/careers
+- type: Partners
+  url: https://www.proteantecs.com/partners
+- type: Press
+  url: https://www.proteantecs.com/pressroom
+- type: KnowledgeBase
+  url: https://www.proteantecs.com/knowledge-center
+- type: LLMsTxt
+  url: llms/proteantecs-llms.txt
+- type: Plans
+  url: plans/proteantecs-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/proteantecs-rate-limits.yml
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    proteanTecs markets "APIs and data connectors for seamless integration with ATEs and
+    analytics tools" on its chip-production solution page, but the only host that serves
+    that surface, support.proteantecs.com, answers anonymous callers with
+    401 {"status":401,"message":"User is missing, you are probably not logged in"} and
+    returns a Cloudflare 403 interstitial on every deeper path, so the contract is
+    reachable only inside a contracted customer tenant.
+  evidence:
+  - url: https://support.proteantecs.com/
+    status: 401
+  - url: https://support.proteantecs.com/openapi.json
+    status: 403
+  - url: https://www.proteantecs.com/openapi.json
+    status: 404
+  - url: https://www.proteantecs.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.proteantecs.com/llms.txt
+    status: 404
+  checked: '2026-08-26'

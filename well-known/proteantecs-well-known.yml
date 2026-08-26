@@ -1,0 +1,57 @@
+generated: '2026-08-26'
+method: probed
+source: live HTTPS probes of every proteanTecs host named in apis.yml (2026-08-26)
+note: >-
+  Every /.well-known/ path probed on every proteanTecs host missed. www and guc are one
+  HubSpot CMS instance and answer 404 (a 145KB HTML 404 page, not a document) for all five
+  paths. support.proteantecs.com sits behind Cloudflare and answers 403 with a "Attention
+  Required! | Cloudflare" interstitial to every /.well-known/ request, so nothing there
+  could be read either; its root answers 401 application/json
+  {"status":401,"message":"User is missing, you are probably not logged in"}, which is the
+  customer application, not a well-known document. NO WellKnown or SecurityTxt pointer is
+  emitted from this file — it records an absence, not a presence.
+hosts:
+- host: www.proteantecs.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: support.proteantecs.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+  - path: /.well-known/agent-card.json
+    status: 403
+- host: guc.proteantecs.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
