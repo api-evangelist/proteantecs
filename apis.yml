@@ -10,6 +10,17 @@ description: 'proteanTecs is an Israeli deep data analytics company for advanced
   telecom and mobile customers. The company markets APIs and data connectors for integrating
   its analytics with ATE testers and third-party analytics tools, but publishes no public
   developer program, API reference or machine-readable contract.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.proteantecs.com/hubfs/Website/Global/Logos/proteantecs-logo-light.svg
 url: https://raw.githubusercontent.com/api-evangelist/proteantecs/refs/heads/main/apis.yml
 x-type: company
